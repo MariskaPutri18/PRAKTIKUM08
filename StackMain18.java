@@ -12,45 +12,45 @@ public class StackMain18 {
             System.out.println("2. Pop");
             System.out.println("3. Peek");
             System.out.println("4. Print");
+            System.out.println("5. Get Max");
             System.out.print("Pilih operasi (1/2/3/4): ");
             int operasi = sc.nextInt();
             sc.nextLine();
             switch (operasi) {
                 case 1:
-                System.out.print("jenis: ");
-                String jenis = sc.nextLine();
-                System.out.print("Warna: ");
-                String warna = sc.nextLine();
-                System.out.print("merk: ");
-                String merk = sc.nextLine();
-                System.out.print("ukuran: ");
-                String ukuran = sc.nextLine();
-                System.out.print("Harga: ");
-                double harga = sc.nextDouble();
-                sc.nextLine();
+                    System.out.print("jenis: ");
+                    String jenis = sc.nextLine();
+                    System.out.print("Warna: ");
+                    String warna = sc.nextLine();
+                    System.out.print("merk: ");
+                    String merk = sc.nextLine();
+                    System.out.print("ukuran: ");
+                    String ukuran = sc.nextLine();
+                    System.out.print("Harga: ");
+                    double harga = sc.nextDouble();
+                    sc.nextLine();
 
-                Pakaian18 p = new Pakaian18(jenis, warna, merk, ukuran, harga);
-                stk.push(p);
+                    Pakaian18 p = new Pakaian18(jenis, warna, merk, ukuran, harga);
+                    stk.push(p);
                     break;
                 case 2:
-                stk.pop();
-                 break;
-            
-                case 3:
-                stk.peek();
+                    stk.pop();
                     break;
-                
+                case 3:
+                    stk.peek();
+                    break;
                 case 4:
-                stk.print();
+                    stk.print();
+                    break;
+                case 5:
+                    stk.getMax();
                     break;
                 default:
                     System.out.println("Operasi tidak ada");
             }
-            System.out.print("apakah Anda akan menambhakan data baru ke stack (y/n)? ");
+            System.out.print("apakah Anda akan menambahkan data baru ke stack (y/n)? ");
             pilih = sc.next().charAt(0);
             sc.nextLine();
-        }while (pilih == 'y');
-
-       
+        } while (pilih == 'y');
     }
 }
